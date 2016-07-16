@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -36,8 +37,10 @@ public class MathActivity extends AppCompatActivity {
                 Button b = (Button) v;
                 String chosen = (String) b.getText();
                 if(chosen.equals(String.valueOf(answer))){
+                    Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
                     nextQuestion();
                 }
+                Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
             }
         };
 
